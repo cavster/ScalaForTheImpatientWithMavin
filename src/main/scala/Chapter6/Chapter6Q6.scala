@@ -16,7 +16,7 @@ object Chapter6Q6{
 
   import PlayingCardSuit._
 
-  def isRed(s: PlayingCardSuit) = {
+  def isRed(s: PlayingCardSuit):String = {
     if (s == Heart || s == Diamond) "red"
     else "is not red"
   }

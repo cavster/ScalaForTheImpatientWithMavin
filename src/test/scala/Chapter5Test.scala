@@ -31,4 +31,9 @@ class Chapter5Test extends FunSuite{
     val time2 = new Time(10,10)
     assert(time.before(time2)==false)
   }
+  test("test Person"){
+    val person = new Person(-5)
+    println("ReturnedAge: " + person.age)
+    assert(person.age==0)
+  }
 }

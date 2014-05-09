@@ -4,7 +4,7 @@
  */
 package Chapter6
 
-object Chapter6 {
+object Chapter6 extends App {
 
   println(Conversions.inchesToCentmeters(556))
   println(Conversions.gallonsToLiters(4345))
@@ -16,9 +16,9 @@ object Chapter6 {
  // println(args.reverse.mkString("Hello World"))
 }
 
-object Reverse extends App {
+object Reverse  {
 
-  println(args.reverse.mkString("hi are you "))
+  //println(args.reverse.mkString("hi are you "))
   println("Hello World")
 }
 object Conversions{//Q1

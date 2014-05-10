@@ -10,6 +10,6 @@ class Creature {
 
 class Ant extends Creature {
   override def range = 2
-  
+
 }
 

@@ -17,14 +17,14 @@ class Chapter8Test extends FunSuite {
     saveingAccount.deposit(1)
     saveingAccount.deposit(1)
     saveingAccount.deposit(1)
-    assert(saveingAccount.checkBalance==503)
+    assert(saveingAccount.checkBalance == 503)
   }
 
   test("Test Bundle Methods"){
     val bundle = new Chapter8.Bundle(items = List(//had two names with Bundle
       new SimpleItem(price = 55, description = "Colm new item"),
       new SimpleItem(price = 14, description = "Colm new item ")))
-      assert(bundle.price==69)
+      assert(bundle.price == 69)
   }
   //fix this later
 

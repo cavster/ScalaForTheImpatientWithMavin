@@ -60,13 +60,6 @@ object Chapter2 {
     else if (n == 0)1
     else  1 / power(x, -n)
   }
-  println(power(1,2))
-
-  println(power(2,1))
-
-  println(power(2,0))
-
-  println(power(2,-4))
 
   def recUnicodeProduct(s: String): Long = {
     s.length match {

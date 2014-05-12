@@ -13,7 +13,7 @@ object Chapter4 extends App {
   //Q1 with a for loop
   def computeDiscountItems(items: Map[String, Double]) = for ((k, v) <- items) yield (k, v * 0.9)
 
-  //witt mapValues
+  //with mapValues
   val newItems2 = items.mapValues(_ * 0.9)
   //with case classes
   println(newItems2)

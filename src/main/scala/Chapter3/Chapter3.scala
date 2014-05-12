@@ -73,14 +73,14 @@ object Chapter3 extends App {
   val americas = timezones.filter(k => k.contains("America")).map(k => k.split("/")(1))
   Sorting.quickSort(americas)
   println(americas.deep.mkString(" "))
-
+  //Q10
   //TO DO clean this uo colm
   val flavMap = SystemFlavorMap.getDefaultFlavorMap().asInstanceOf[SystemFlavorMap]
   val natives = flavMap.getNativesForFlavor(DataFlavor.imageFlavor)
 
   //val arr =  getAvailableIDs()for(elem <- arr if (elem.contains("America")))yield elem
-}
 
+}
 /*
 var first = true
 println(first)

@@ -44,8 +44,6 @@ object Chapter13 extends App {
     res
   }
 
-
-
   val x = indexes("Missisipi")
   println(x)
   //from page 171 in book//counts the occurane of each letter

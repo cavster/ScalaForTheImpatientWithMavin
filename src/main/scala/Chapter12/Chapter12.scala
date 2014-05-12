@@ -27,4 +27,15 @@ object Chapter12 extends App{
     inputs.map(fun).max
   }
   println(largest(x => 10 * x - x * x,1 to 10))
+  //Q7//use tubles
+  val pairs = (1 to 10) zip (11 to 20)
+  println(pairs)
+  def adjustToPair(fun: (Int, Int) => Int) : ((Int, Int)) => Int = {
+    case(x, y) => fun(x, y)//call the funotin on the two varables
+  }
+  val answer = pairs.map(adjustToPair(_ + _))
+  println(answer)
+  //Q8
+  //def corresponds[B](that: Seq[B])(p:(A,B) => Boolean): Boolean
+
 }

@@ -25,29 +25,6 @@ for(i <- 1 to 10){
   println(i)
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 def countDown(n:Int) {
   for (n <-(1 to n).reverse) {
     println(n)
@@ -67,18 +44,6 @@ def computeUniCode(z:String)= {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 /*var prod =0
 for(c <- "Hello") prod*=c.toInt
 */
@@ -87,21 +52,6 @@ object Product {
 }
 val Product(prod) = for(i <- "Hello") yield BigInt(i)
 computeUniCode("Hello")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 "Hello".map(_.toInt).product
 def positive(n:Int) =n>0

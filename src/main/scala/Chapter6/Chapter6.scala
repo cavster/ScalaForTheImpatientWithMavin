@@ -5,9 +5,10 @@
 package Chapter6
 
 
-object Reverse extends App  {
-
-  //println(args.reverse.mkString("hi are you "))
+object Reverse   {
+  def main (args: Array[String]) {
+//  println(args.reverse.mkString("hi are you "))
+  }
   println("Hello World")
 }
 object Conversions{//Q1

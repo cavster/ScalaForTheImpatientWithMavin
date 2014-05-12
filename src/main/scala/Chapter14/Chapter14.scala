@@ -79,7 +79,7 @@ def sumLeaf2(list: List[Any]) : Int = {
       case Leaf(v) => v
     }
   }
-  //gotfrom git hub Q9
+  //got from git hub Q9 alterative solution
   val l : List[Option[Int]] = List(Option(-1),None,Option(2))
   println(l.map(_.getOrElse(0)).sum)
 }

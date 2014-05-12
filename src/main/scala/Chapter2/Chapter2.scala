@@ -21,7 +21,7 @@ object Chapter2 {
   def empty()={}//its type is Unit
   var y=2
   var x:Unit=y=1
-//Question 4 write a scala equivalent for the Java Loop
+  //Question 4 write a scala equivalent for the Java Loop
   for(i <- 1 to 10){
     println(i)
   }
@@ -49,7 +49,7 @@ object Chapter2 {
       case _ => s.head.toLong * recUnicodeProduct(s.drop(1))
     }
   }
-
+  //Q4
   def positive(n:Int) = n > 0
   def negative(n:Int) = n < 0
   def even(n:Int) = n%2 == 0
@@ -67,6 +67,7 @@ object Chapter2 {
   println(power(2,0))
 
   println(power(2,-4))
+
   def recUnicodeProduct(s: String): Long = {
     s.length match {
       case 0 => 1L

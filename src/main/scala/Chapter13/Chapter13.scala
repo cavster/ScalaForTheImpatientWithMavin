@@ -63,7 +63,7 @@ object Chapter13 extends App {
   //.get returns value associated with _ as an option if found none if not found
   println(convert(nameArray,nameMap))
   println(nameMap.mkString("//"))
-  println(nameMap.filter({case(name,number)=>number<4}))//smart scala!
+  println(nameMap.filter({case( name, number) => number<4}))//smart scala!
 
   val frist =List(1,2,3,4,5,6,7,8,9,10,-23,324,-44)
   val q = (frist :\ List[Int]())(_ :: _)

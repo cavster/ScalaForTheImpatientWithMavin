@@ -1,6 +1,6 @@
 import org.junit.runner.RunWith
 import org.scalatest.FunSuite
-import Chapter5._
+//import Chapter5._
 import org.scalatest.junit.JUnitRunner
 
 //need this
@@ -10,7 +10,7 @@ import org.scalatest.junit.JUnitRunner
  */
 @RunWith(classOf[JUnitRunner])
 class Chapter5Test extends FunSuite{
-  test("test deposite Bank") {
+ /* test("test deposite Bank") {
     println("Hi")
     val Bank = new BankAccount()
     Bank.deposit(200)
@@ -35,5 +35,5 @@ class Chapter5Test extends FunSuite{
     val person = new Person(-5)
     println("ReturnedAge: " + person.age)
     assert(person.age==0)
-  }
+  }*/
 }

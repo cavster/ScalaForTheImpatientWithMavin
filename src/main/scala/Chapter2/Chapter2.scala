@@ -50,10 +50,10 @@ object Chapter2 {
     }
   }
 
-  def positive(n:Int) =n > 0
+  def positive(n:Int) = n > 0
   def negative(n:Int) = n < 0
-  def even(n:Int)= n%2 == 0
-  def isNotEven(n:Int)= !even(n)//not equal too
+  def even(n:Int) = n%2 == 0
+  def isNotEven(n:Int) = !even(n)//not equal too
   def power(x: Double, n: Int) : Double = {
     if (positive(n) && even(n)) power(x, n/2) * power(x,n/2)
     else if (positive(n)) x * power(x, n-1)

@@ -40,6 +40,14 @@ for(i <- 1 to 10){
 
 
 
+
+
+
+
+
+
+
+
 def countDown(n:Int) {
   for (n <-(1 to n).reverse) {
     println(n)
@@ -56,6 +64,11 @@ def computeUniCode(z:String)= {
  sum
 }
   computeUniCode("Hello")
+
+
+
+
+
 
 
 
@@ -85,6 +98,11 @@ computeUniCode("Hello")
 
 
 
+
+
+
+
+
 "Hello".map(_.toInt).product
 def positive(n:Int) =n>0
 def negative(n:Int) = n<0
@@ -99,13 +117,17 @@ def power(x: Double, n: Int) : Double = {
 println(power(1,2))
 
 
+
 println(power(2,1))
+
 
 
 println(power(2,0))
 
 
+
 println(power(2,-4))
+
 
 
 

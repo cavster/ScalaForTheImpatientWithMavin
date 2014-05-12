@@ -4,6 +4,7 @@
 
 package Chapter6
 
+
 object Chapter6Q6{
 
   object PlayingCardSuit extends Enumeration {

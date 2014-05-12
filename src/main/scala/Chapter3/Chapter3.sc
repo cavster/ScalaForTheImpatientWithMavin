@@ -9,13 +9,16 @@ val nums = new Array[Int](15)
 println(nums.length)
 
 
+
 val r = scala.util.Random
 val x= for(i <-0 until nums.length){
   r.nextInt(nums.length)
 }yield r
 println(x)
 
+
 println(nums)
+
 
 def fillArray(arr:Array[Int],value:Int,index:Int){
   if(index<arr.length){
@@ -26,6 +29,7 @@ def fillArray(arr:Array[Int],value:Int,index:Int){
 }
 fillArray(nums,Random.nextInt(),0)
 println(nums)
+
 
 //needs 3 I ne
 val b = ArrayBuffer[Double](3,2,-5,7,-15,18,-1,3,3,3);

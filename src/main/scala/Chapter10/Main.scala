@@ -6,7 +6,7 @@ package Chapter10
 import java.awt.Point
 import scala.math.Ordered
 //got this one online 2
-object MainQ2 {
+object MainQ2 extends  App{
   class OrderedPoint(x: Int, y: Int) extends Point(x, y) with Ordered[Point] {
     def compare(that: Point) = {
       if (x < that.x || (x == that.x && y < that.y))

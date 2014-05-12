@@ -1,6 +1,7 @@
 package Chapter5
 
 
+
 /**
  * Created by colmcavanagh on 5/5/14.
  */
@@ -20,6 +21,7 @@ object Chapter5 extends App {
   val time3 = new Time(7, 18)
   println(time.before(time2))
   println(time.before(time3))
+
 /*  val nameStudentOne = new Student("colm", 5)
   println(nameStudentOne.getId)
   println(nameStudentOne.getName)
@@ -28,13 +30,6 @@ object Chapter5 extends App {
   val PersonTwo = new Person(-4)
   println(PersonTwo.age)
 */
-
-
-
-
-  //read only
-
-
 
 }
   /* read only

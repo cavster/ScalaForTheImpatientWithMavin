@@ -5,10 +5,8 @@ package Chapter13
  */
 
 import java.util.TreeMap
-import scala.collection.mutable.Set
 import collection.JavaConversions._
 import scala.collection.mutable._
-import scala.collection.parallel.mutable
 import scala.collection
 
 /**

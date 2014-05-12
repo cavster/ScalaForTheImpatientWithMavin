@@ -42,7 +42,7 @@ class Money(val dollars: Int, val cents: Int) {
   override def toString = "$" + dollars + "." + cents
 }
 
-object Main{
+object Main extends App{
   val money1 = Money(2, 25)
   val money2 = Money(1, 50)
   println(money1)

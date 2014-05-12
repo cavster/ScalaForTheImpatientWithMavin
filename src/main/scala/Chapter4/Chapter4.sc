@@ -6,11 +6,12 @@ import scala.collection.JavaConversions.mapAsScalaMap
 /**
  * Created by colmcavanagh on 5/3/14.
  */
-val items:Map[String,Double]=Map("phone"->100.5,"Iphone"->4000,"Colm"->6045)//you need to declare types remember!
-val newItems= (for((k,v)<- items)yield(k,v*0.9))//with loop
-val newItems2=items.mapValues(_*0.9)//map values
-val newItems3=items.map{ case (k,v) => (k,v*0.9) }
+val items:Map[String,Double] = Map("phone"->100.5,"Iphone"->4000,"Colm"->6045)//you need to declare types remember!
+val newItems = (for((k,v)<- items)yield(k,v*0.9))//with loop
+val newItems2 = items.mapValues(_*0.9)//map values
+val newItems3 = items.map{ case (k,v) => (k,v*0.9) }
 println(newItems)
+
 
 
 /*

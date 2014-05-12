@@ -1,8 +1,9 @@
 package Chapter3
 
-import scala.util.{Sorting, Random}
+import scala.util.Sorting
 import java.awt.datatransfer.{DataFlavor, SystemFlavorMap}
 import scala.collection.mutable.ArrayBuffer
+
 /**
  * Created by colmcavanagh on 5/9/14.
  */
@@ -61,9 +62,10 @@ object Chapter3 extends App {
   val adverage = d.sum / d.length
   d.reverse
   d.distinct
-//Q9
-  import java.util.TimeZone.getAvailableIDs
-//One way of doing it
+  //Q9
+
+
+  //One way of doing it
   val array = (for (timeZone <- java.util.TimeZone.getAvailableIDs if timeZone.startsWith("America")) yield timeZone.drop(8)).toBuffer.sorted
   println(array)
   //With mapping
@@ -72,12 +74,13 @@ object Chapter3 extends App {
   Sorting.quickSort(americas)
   println(americas.deep.mkString(" "))
 
-//TO DO clean this uo colm
+  //TO DO clean this uo colm
   val flavMap = SystemFlavorMap.getDefaultFlavorMap().asInstanceOf[SystemFlavorMap]
   val natives = flavMap.getNativesForFlavor(DataFlavor.imageFlavor)
 
   //val arr =  getAvailableIDs()for(elem <- arr if (elem.contains("America")))yield elem
 }
+
 /*
 var first = true
 println(first)
@@ -97,7 +100,7 @@ println(z)
 
 val a = ArrayBuffer(1,2,3,4,5)
 for (i<-0 until a.length){
-  if (i%2==0) println(a(i))
+  if (i%2 == 0) println(a(i))
   else println(a(i-1)) }
 val p = 1 to 15 filter { _ > 0 } map { Random.nextInt(_) }
 //this makes a new array

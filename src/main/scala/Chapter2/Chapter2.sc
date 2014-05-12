@@ -24,14 +24,11 @@ var x:Unit=y=1
 for(i <- 1 to 10){
   println(i)
 }
-
 def countDown(n:Int) {
   for (n <-(1 to n).reverse) {
     println(n)
   }
 }
-//countDown(14)
-//countDown(12)
 def computeUniCode(z:String)= {
   var sum = 0
   for (i <- z) {
@@ -41,9 +38,7 @@ def computeUniCode(z:String)= {
  sum
 }
   computeUniCode("Hello")
-
-
-
+//Seperate way of doing it
 /*var prod =0
 for(c <- "Hello") prod*=c.toInt
 */
@@ -65,17 +60,8 @@ def power(x: Double, n: Int) : Double = {
   else  1 / power(x, -n)
 }
 println(power(1,2))
-
-
-
 println(power(2,1))
-
-
-
 println(power(2,0))
-
-
-
 println(power(2,-4))
 
 

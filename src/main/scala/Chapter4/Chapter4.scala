@@ -139,7 +139,7 @@ def countWords: Unit =
 
   lteggt(b, 3)
 
-  //Done with tubles gotten Online
+  //Done with tubles got of github
   def test2(values: Array[Int], v: Int) = {
     (values.count(_ < v), values.count(_ == v), values.count(_ > v)) //- note use of done alot
   }

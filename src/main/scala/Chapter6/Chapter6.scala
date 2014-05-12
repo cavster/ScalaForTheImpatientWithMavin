@@ -40,7 +40,6 @@ object MilesToKilometers extends Conversions{
 //Q3
 object Orgin extends java.awt.Point{
 
-
 }
 //  Q4
 class Point(var x: Int, var y: Int) {

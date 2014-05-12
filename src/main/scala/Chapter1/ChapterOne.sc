@@ -15,16 +15,16 @@ val string="crazy"
 string*3
 //Q5
 10 max(2)
-//Q567
+//Q5,6,7
 val q=math.pow(2,1024)
 BigInt(2).pow(1024)
 BigInt.probablePrime(100,Random)
 //Q8
-val z=BigInt.apply(32,Random)
+val randomNumber=BigInt.apply(32,Random)
 val a=z.toString(36)
 //Q9,Q10
-val frist =a.charAt(0)
-val last=a.charAt(a.length-1)
+val fristLetter =a.charAt(0)
+val lastLetter =a.charAt(a.length-1)
 a.take(3)
 a.drop(3)
 a.takeRight(2)

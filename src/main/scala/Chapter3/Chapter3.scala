@@ -45,7 +45,7 @@ object Chapter3 extends App {
     for (elem <- b) {
       if (elem >= 0) {
         d += elem
-      } else {
+      }else {
         c += elem
       }
     }
@@ -74,13 +74,14 @@ object Chapter3 extends App {
   Sorting.quickSort(americas)
   println(americas.deep.mkString(" "))
   //Q10
-  //TO DO clean this uo colm
   val flavMap = SystemFlavorMap.getDefaultFlavorMap().asInstanceOf[SystemFlavorMap]
   val natives = flavMap.getNativesForFlavor(DataFlavor.imageFlavor)
 
   //val arr =  getAvailableIDs()for(elem <- arr if (elem.contains("America")))yield elem
 
 }
+//Some Alterative soloutions
+
 /*
 var first = true
 println(first)

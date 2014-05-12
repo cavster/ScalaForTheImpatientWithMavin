@@ -9,7 +9,7 @@ import scala.collection.mutable.{Map, ArrayBuffer}
 
 @RunWith(classOf[JUnitRunner])
 class Chapter4Test extends FunSuite{
- /* test("test getDiscount") {
+  test("test getDiscount") {
     val items: Map[String, Double]   = Map("phone" -> 100.5, "Iphone" -> 4000, "Colm" -> 6045)
     val newItems: Map[String,Double] = Map("Colm" -> 5440.5, "Iphone" -> 3600.0, "phone" -> 90.45);
     println("ReturnedMap: " + Chapter4.Chapter4.computeDiscountItems(items))
@@ -27,6 +27,6 @@ class Chapter4Test extends FunSuite{
     val returnedTuple =Tuple3(3,2,1)
     println("ReturnedTuple " + Chapter4.Chapter4.lteggt(testArray,3))
     assert(Chapter4.Chapter4.lteggt(testArray,3)==returnedTuple)
-  }*/
+  }
 }
 

@@ -23,8 +23,10 @@ object Chapter2 {
   var y = 2
   var x: Unit = y = 1
   //Question 4 write a scala equivalent for the Java Loop
-  for (i <- 1 to 10) {
-    println(i)
+  def printOneToTen()= {
+    for (i <- 1 to 10) {
+      println(i)
+    }
   }
 
   // write a procedual countdown(n:Int) from n to zero
@@ -54,7 +56,8 @@ object Chapter2 {
     }
   }
 
-  //Q4
+  //Q10
+  /*
   def positive(n: Int) = n > 0
 
   def negative(n: Int) = n < 0
@@ -68,6 +71,19 @@ object Chapter2 {
     else if (positive(n)) x * power(x, n - 1)
     else if (n == 0) 1
     else 1 / power(x, -n)
+  }
+def power(x: Double, n: Int): Double = n match {
+  if (positive (n) && even (n) ) power (x, n / 2) * power (x, n / 2)
+  else if (positive (n) ) x * power (x, n - 1)
+  else if (n == 0) 1
+  else 1 / power (x, - n)
+  }*/
+
+  def power(x: Double, n: Int): Double = n match {
+    case _ if n > 0 && n % 2 == 0 => math.pow(power(x, n / 2), 2)//recursion call  funotion again
+    case _ if n > 0 => x * power(x, n - 1)
+    case _ if n == 0 => 1
+    case _ if n < 0 => 1 / power(x, -n)
   }
 
   def recUnicodeProduct(s: String): Long = {

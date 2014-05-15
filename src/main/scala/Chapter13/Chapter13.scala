@@ -56,6 +56,7 @@ object Chapter13 extends App {
   val nameArray =Array("tom","harry","fred")
   val nameMap = collection.mutable.Map("tom"->3,"dick"->4,"fred"->5)
   println(nameMap.keys)
+
   def convert(a:Array[String],b:Map[String,Int]) =a.toList.map(b.get(_)).flatMap(x => x)
   //with out flat map returns some or none and flatmap gets rid of it
   //.get returns value associated with _ as an option if found none if not found

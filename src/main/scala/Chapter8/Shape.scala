@@ -6,6 +6,7 @@ package Chapter8
  * Created by colmcavanagh on 5/9/14.
  */
 //From gibhub but however
+/*
 class Point(val x: Int, val y: Int) {
   override def toString = "Point(%d, %d)".format(x, y)
 }
@@ -20,4 +21,4 @@ class Rectangle(val topLeft: Point, val bottomRight: Point) extends Shape {
 }
 
 class Circle(override val centerPoint: Point, val radius: Int) extends Shape
-
+*/

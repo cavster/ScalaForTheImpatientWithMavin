@@ -94,8 +94,7 @@ object Chapter14 extends App{
   val l : List[Option[Int]] = List(Option(-1),None,Option(2))
   println(l.map(_.getOrElse(0)).sum)
 
-  //Q10 Ribbed From github
-
+  //Q10
   type T = Double => Option[Double]
 
   def compose(f: T, g: T): T = {
@@ -104,6 +103,7 @@ object Chapter14 extends App{
       case None => None
     }
   }
+import scala.math.sqrt
 
   def f(x: Double) = if (x >= 0) Some(sqrt(x)) else None
   def g(x: Double) = if (x != 1) Some(1 / (x - 1)) else None

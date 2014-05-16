@@ -12,6 +12,7 @@ object Chapter12 extends App{
   //Q2
   val a = Array(1,2,3,4,5)
   val max = a.reduceLeft(( x , y ) => if (x > y)x else y)//goes through whole array
+  println(a.max)
   println(max)
   //with recursion def factorial(n: Int): Int = if (n == 0) 1 else n * factorial(n - 1)
   //Q3
@@ -27,6 +28,10 @@ object Chapter12 extends App{
     inputs.map(fun).max
   }
   println(largest(x => 10 * x - x * x,1 to 10))
+  //Q6
+  def largestTwo(fun: (Int) => Int, inputs: Seq[Int]) = inputs.map(x => (x, fun(x))).reduceLeft((x,y) => if (x._2 > y._2) x else y)._1
+
+  println(largestTwo(x => 10 * x - x * x, 1 to 10))
   //Q7//use tubles
   val pairs = (1 to 10) zip (11 to 20)
   println(pairs)
@@ -36,6 +41,15 @@ object Chapter12 extends App{
   val answer = pairs.map(adjustToPair(_ + _))
   println(answer)
   //Q8
-  //def corresponds[B](that: Seq[B])(p:(A,B) => Boolean): Boolean
+  def corresponds[A, B](a: Seq[A], b: Seq[B], f: (A, B) => Boolean) = (a zip b).map(x => f(x._1, x._2)).count(!_) == 0
 
+  val o = Array("Hello", "Everyone", "Maddness", "!")
+  val p = o.map(_.length)
+
+  println(o.mkString(", "))
+  println(p.mkString(", "))
+
+  val y = corresponds(o, p, (p: String, o: Int) => p.length == o)
+
+  println(y)
 }

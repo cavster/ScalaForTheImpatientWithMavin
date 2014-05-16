@@ -1,7 +1,5 @@
 package Chapter5
 
-
-
 /**
  * Created by colmcavanagh on 5/5/14.
  */
@@ -15,7 +13,7 @@ object Chapter5 extends App {
 
   Bank.deposit(5000)
   Bank.withdraw(200)
-  println("This is the balanace"+Bank.bal)
+  println("This is the balanace"+Bank)
   val time = new Time(10, 30)
   val time2 = new Time(20, 22)
   val time3 = new Time(7, 18)

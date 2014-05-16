@@ -1,6 +1,6 @@
 package Chapter4
 
-import scala.collection.mutable.Map
+import scala.collection.mutable
 
 /**
  * Created by colmcavanagh on 5/3/14.
@@ -11,7 +11,7 @@ object Chapter4 extends App {
   val items: Map[String, Double] = Map("phone" -> 100.5, "Iphone" -> 4000, "Colm" -> 6045)
 
   //Q1 with a for loop
-  def computeDiscountItems(items: Map[String, Double]) = for ((k, v) <- items) yield (k, v * 0.9)
+  def computeDiscountItems(items: mutable.Map[String, Double]) = for ((k, v) <- items) yield (k, v * 0.9)
 
   //with mapValues
   val newItems2 = items.mapValues(_ * 0.9)
@@ -20,7 +20,8 @@ object Chapter4 extends App {
   val newItems3 = items.map {
     case (k, v) => (k, v * 0.9)
   }
-
+//Q2,3,4
+  /*
 def countWords: Unit =
   {
     val in = new java.util.Scanner(new java.io.File("/Users/colmcavanagh/Developer/scalaMavinForTheImpatient/Text.txt")).useDelimiter("\\s")
@@ -37,7 +38,7 @@ def countWords: Unit =
 
 
 //another way of doing it
-/*  val words = new scala.collection.mutable.HashMap[String, Int]
+  val words = new scala.collection.mutable.HashMap[String, Int]
   val in = new java.util.Scanner(new java.io.File("/Users/colmcavanagh/Developer/scalaTest/text.txt"))
   while (in.hasNext()) {
     val word = in.next();
@@ -47,10 +48,10 @@ def countWords: Unit =
       words(word) = 1
   }
   println(words)
-
+*/
 //3rd way
-  def countWordsWithSortedMap: Unit = {
-    val in = new java.util.Scanner(new java.io.File("/Users/colmcavanagh/Developer/scalaTest/text.txt")).useDelimiter("\\s")
+  def countWordsWithSortedMap: Map[String,Int] = {
+    val in = new java.util.Scanner(new java.io.File("/Users/colmcavanagh/Developer/scalaMavinForTheImpatient/Text.txt")).useDelimiter("\\s")
     var map = scala.collection.immutable.SortedMap[String, Int]() //P44
     while (in.hasNext) {
       val s = in.next()
@@ -58,14 +59,11 @@ def countWords: Unit =
       print(s + " ") //
       // println(map)
     }
-    println(map)
+    map
     // println()
   }
 
   println(countWordsWithSortedMap) //Works!
-
-
- */
 
   import scala.collection.mutable.LinkedHashMap
 
@@ -93,7 +91,7 @@ def countWords: Unit =
   val b = Array[Int](3, 2, -5, 7, -15, 18, -1, 3, 3, 3);
   //Q8
   //done with tubles
-  def minmax(values: Array[Int]): Tuple2[Int, Int] = {
+  def minmax(values: Array[Int]): (Int, Int) = {
     return (values.min, values.max)
   }
 
@@ -119,6 +117,7 @@ def countWords: Unit =
 
   //by counts it means sum???
   //with loops
+  /*
   def lteggt(values: Array[Int], p: Int): (Int, Int, Int) = {
     var lessThen: Int = 0
     var greaterThen = 0
@@ -136,19 +135,23 @@ def countWords: Unit =
     }
     (lessThen, greaterThen, Equal)
   }
-
+  *//*
+  def lteqgt(values: Array[Int], v : Int) = (
+    values.count(_ < v),
+    values.count(_ == v),
+    values.count(_ > v)
+    )
   lteggt(b, 3)
-
+*/
   //Done with tubles got of github
-  def test2(values: Array[Int], v: Int) = {
+  def lteqgt(values: Array[Int], v: Int) = {
     (values.count(_ < v), values.count(_ == v), values.count(_ > v)) //- note use of done alot
   }
 
-  test2(b, 3)
+  lteqgt(b, 3)
   val Hello = "Hello"
   val World = "World"
   Hello.zip(World)
-
 }
 /*
 val props: Map[String, String] = System.getProperties

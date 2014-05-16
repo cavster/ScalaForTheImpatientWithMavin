@@ -9,37 +9,46 @@ import scala.collection.mutable.ArrayBuffer
  */
 object Chapter3 extends App {
   //Q1
-  def fillArray(nums: Array[Int]): Array[Int] = {
+  def fillArray(n:Int): Array[Int] = {
     val r = scala.util.Random
-    val x = for (i <- 0 until nums.length) {
-      nums(i) = r.nextInt(nums.length)
+    val nums = new Array[Int](n-1)
+    for (i <- 0 until nums.length) {
+      nums(i) = r.nextInt()
     }
     println((nums.mkString(", ")))
     nums
   }
 
-  val nums = new Array[Int](15)
-  println(nums.length)
-  fillArray(nums)
+  val n = 15
+  fillArray(n)
 
   //Q2 + //Q3
-  def swapAdajaentElements(arr: Array[Int]) = {
-    val newArray = for (i <- 0 until arr.length) yield {
-      if (i % 2 == 0 && i < arr.length - 1)
-        arr(i + 1)
-      else if (i % 2 != 0 && i > 0)
-        arr(i - 1)
-      else
-        arr(i)
+  /*
+  def swapAdajaentElements(arr: Array[Int]):Array[Int] = {
+     for(i <- 0 until(arr.length, 2) if i < arr.length-1) {
+      val tmp = arr(i)
+      arr(i) = arr(i+1)
+      arr(i+1) = tmp
     }
-    newArray
+    arr
   }
-
+  def swapAdajaentElements(arr: Array[Int]):Array[Int] = {
+    arr.grouped(2).flatMap(_.reverse).toArray//Done with funotions
+  }*/
+  //case Classes for exception
+  def swapAdajaentElements(arr: Array[Int]):Array[Int] =arr match {
+    case _ if arr.length < 2 =>   arr//maybe put in messgae for error
+    case _ if arr.length > 2 =>   arr.grouped(2).flatMap(_.reverse).toArray
+  }
+  val arraytest= Array(1,2,3,4,5)
+  val newt = swapAdajaentElements(arraytest)
+  println("New Array ")
+  println(newt.deep.mkString(" "))
 
   //Q4
-  val b = ArrayBuffer[Double](3, 2, -5, 7, -15, 18, -1, 3, 3, 3);
+  val b = Array[Double](3, 2, -5, 7, -15, 18, -1, 3, 3, 3);
 
-  def sortArrayPosToNeg(b: ArrayBuffer[Double]): ArrayBuffer[Double] = {
+  def sortArrayPosToNeg(b: Array[Double]): Array[Double] = {//Kinda Hard to do without ArrayBuffer
     val c = ArrayBuffer[Double]()
     val d = ArrayBuffer[Double]()
     for (elem <- b) {
@@ -51,8 +60,9 @@ object Chapter3 extends App {
     }
     println(d)
     println(c)
-    d ++= c.toArray
-    d
+    d ++= c.toArray//need to turn it to array
+    d.toArray
+
   }
 
   //Q5,6,7
@@ -76,7 +86,10 @@ object Chapter3 extends App {
   //Q10
   val flavMap = SystemFlavorMap.getDefaultFlavorMap().asInstanceOf[SystemFlavorMap]
   val natives = flavMap.getNativesForFlavor(DataFlavor.imageFlavor)
-
+  //carys method
+  def americanTimeZones: Array[String] = {
+    java.util.TimeZone.getAvailableIDs.filter(_.startsWith("America/")).map(_.substring("America/".length)).sortWith(_ < _)
+  }
   //val arr =  getAvailableIDs()for(elem <- arr if (elem.contains("America")))yield elem
 
 }

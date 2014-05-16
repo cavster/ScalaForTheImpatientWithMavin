@@ -1,14 +1,23 @@
 package Chapter8
 
-import java.awt.Rectangle
+
 
 /**
  * Created by colmcavanagh on 5/9/14.
  */
+//From gibhub but however
+class Point(val x: Int, val y: Int) {
+  override def toString = "Point(%d, %d)".format(x, y)
+}
 
-abstract class Shape { def centerPoint: (Int, Int) }
+abstract class Shape {
+  def centerPoint: Point
+  override def toString =  "%s(Center: %s)".format(this.getClass.getSimpleName, centerPoint.toString)
+}
 
-class Rectanglex(val width: Int, val height: Int, val centerPoint: (Int, Int)) extends Shape
-// x added because of q7
-class Circle(val radius: Int, val centerPoint: (Int, Int)) extends Shape
+class Rectangle(val topLeft: Point, val bottomRight: Point) extends Shape {
+  override val centerPoint = new Point((bottomRight.x - topLeft.x) / 2, (bottomRight.y - topLeft.y) / 2)
+}
+
+class Circle(override val centerPoint: Point, val radius: Int) extends Shape
 

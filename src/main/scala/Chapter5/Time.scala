@@ -1,23 +1,18 @@
 package Chapter5
 
+
 /**
  * Created by colmcavanagh on 5/9/14.
  */
-class Time {
+class Time (val hrs:Int, val min:Int){
 
-  var h = 0
-  var m = 0
-
+  var h =  hrs * 60 - 1
+  var m = min
   def hours = h
 
   def minutes = m
 
-  def this(hrs: Int, min: Int) {
-    //constrators
-    this()
-    this.h = hrs * 60 - 1
-    this.m = min
-  }
+
 
   def before(other: Time): Boolean = {
 

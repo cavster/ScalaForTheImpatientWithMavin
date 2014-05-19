@@ -60,12 +60,14 @@ object Chapter13 extends App {
   //Q3
   println((Map[Char, Int]()/: "Mississipi"){(m,c)=>m+(c->(m.getOrElseUpdate(c,0)+1))})//creates a new set each time
   val linkedListWithZeros = collection.mutable.LinkedList(1, -2, -3, 0, 0, 0, 12, 10, 0)
+
   println(linkedListWithZeros.filter(_ != 0))//keep everything that is not equal to zero
   println(linkedListWithZeros.filter(_ == 0))//just keep zeros
   println(linkedListWithZeros.partition(_ != 0))//splits them keeps both
  def removeZerosFromLinkedlist(list:mutable.LinkedList[Int]):LinkedList[Int] = {
         list.filter(_ != 0)
   }
+
  println(removeZerosFromLinkedlist(linkedListWithZeros))
   val nameArray =Array("tom","harry","fred")
   val nameMap = collection.mutable.Map("tom"->3,"dick"->4,"fred"->5)

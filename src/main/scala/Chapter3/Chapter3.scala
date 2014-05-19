@@ -35,6 +35,7 @@ object Chapter3 extends App {
   def swapAdajaentElements(arr: Array[Int]):Array[Int] = {
     arr.grouped(2).flatMap(_.reverse).toArray//Done with funotions
   }*/
+
   //case Classes for exception
   def swapAdajaentElements(arr: Array[Int]):Array[Int] =arr match {
     case _ if arr.length < 2 =>   arr//maybe put in messgae for error
@@ -44,6 +45,7 @@ object Chapter3 extends App {
   val newt = swapAdajaentElements(arraytest)
   println("New Array ")
   println(newt.deep.mkString(" "))
+
 
   //Q4
   val b = Array[Double](3, 2, -5, 7, -15, 18, -1, 3, 3, 3);
@@ -83,9 +85,11 @@ object Chapter3 extends App {
   val americas = timezones.filter(k => k.contains("America")).map(k => k.split("/")(1))
   Sorting.quickSort(americas)
   println(americas.deep.mkString(" "))
+
   //Q10
   val flavMap = SystemFlavorMap.getDefaultFlavorMap().asInstanceOf[SystemFlavorMap]
   val natives = flavMap.getNativesForFlavor(DataFlavor.imageFlavor)
+
   //carys method
   def americanTimeZones: Array[String] = {
     java.util.TimeZone.getAvailableIDs.filter(_.startsWith("America/")).map(_.substring("America/".length)).sortWith(_ < _)

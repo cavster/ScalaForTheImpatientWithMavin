@@ -17,12 +17,16 @@ object Chapter2 {
   }
 
   //Questions 2,3,4
+
+
+
   def empty() = {}
 
   //its type is Unit
   var y = 2
   var x: Unit = y = 1
   //Question 4 write a scala equivalent for the Java Loop
+
   def printOneToTen()= {
     for (i <- 1 to 10) {
       println(i)
@@ -30,6 +34,7 @@ object Chapter2 {
   }
 
   // write a procedual countdown(n:Int) from n to zero
+
   def countDown(n: Int) {
     for (n <- (1 to n).reverse) {
       println(n)
@@ -37,6 +42,7 @@ object Chapter2 {
   }
 
   //write a for loop that computes the unicode of a string
+
   def unicodeProductLoop(s: String): Long = {
     var product = 1L
     for (c <- s) product *= c.toLong
@@ -44,6 +50,7 @@ object Chapter2 {
   }
 
   //DoThe previouse excersize without a loop
+
   def unicodeProductNoLoop(s: String): Long = {
     s.foldLeft(1L)(_ * _)
   }
@@ -78,7 +85,7 @@ def power(x: Double, n: Int): Double = n match {
   else if (n == 0) 1
   else 1 / power (x, - n)
   }*/
-
+  //Q10 done with cases
   def power(x: Double, n: Int): Double = n match {
     case _ if n > 0 && n % 2 == 0 => math.pow(power(x, n / 2), 2)//recursion call  funotion again
     case _ if n > 0 => x * power(x, n - 1)

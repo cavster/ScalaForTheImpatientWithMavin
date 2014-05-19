@@ -37,14 +37,14 @@ class SavingsAccount(initialBalance: Double) extends BankAccount(initialBalance)
   override def deposit(amount: Double) = {
     if (count < 3) super.deposit(amount)
     else super.deposit(amount - 1.0) //charges them a dollar
-    count += 1;
+    count += 1
     count
   }
 
   override def withdraw(amount: Double) = {
     if (count < 3) super.deposit(amount)
     else super.deposit(amount - 1.0)
-    count += 1;
+    count += 1
     count
   }
 

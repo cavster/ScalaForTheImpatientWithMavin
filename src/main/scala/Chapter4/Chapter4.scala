@@ -20,9 +20,10 @@ object Chapter4 extends App {
   val newItems3 = items.map {
     case (k, v) => (k, v * 0.9)
   }
-//Q2,3,4
+
+  //Q2,3,4
   /*
-def countWords: Unit =
+ def countWords: Unit =
   {
     val in = new java.util.Scanner(new java.io.File("/Users/colmcavanagh/Developer/scalaMavinForTheImpatient/Text.txt")).useDelimiter("\\s")
     val map = new scala.collection.mutable.HashMap[String, Int]
@@ -49,8 +50,9 @@ def countWords: Unit =
   }
   println(words)
 */
-//3rd way
-  def countWordsWithSortedMap: Map[String,Int] = {
+  //3rd way
+  //Q4
+  def countWordsWithSortedMap: Map[String, Int] = {
     val in = new java.util.Scanner(new java.io.File("/Users/colmcavanagh/Developer/scalaMavinForTheImpatient/Text.txt")).useDelimiter("\\s")
     var map = scala.collection.immutable.SortedMap[String, Int]() //P44
     while (in.hasNext) {
@@ -64,6 +66,7 @@ def countWords: Unit =
   }
 
   println(countWordsWithSortedMap) //Works!
+  //Q6
 
   import scala.collection.mutable.LinkedHashMap
 
@@ -89,6 +92,7 @@ def countWords: Unit =
   daysLinkedMap += ("Saturday" -> Calendar.SATURDAY)
   daysLinkedMap += ("Sunday" -> Calendar.SUNDAY)
   val b = Array[Int](3, 2, -5, 7, -15, 18, -1, 3, 3, 3);
+
   //Q8
   //done with tubles
   def minmax(values: Array[Int]): (Int, Int) = {
@@ -98,9 +102,10 @@ def countWords: Unit =
   minmax(b)
 
   //done without a tuple or funotions
-  def minmaxTwo(values: Array[Int]): (Int, Int) = {//slightly buggy noticed this in test
-    var min: Int = 0//bad design if nothing negative will always return 0 as smallest value
-    var max: Int = 0//also doesnt account for small arrays
+  def minmaxTwo(values: Array[Int]): (Int, Int) = {
+    //slightly buggy noticed this in test
+    var min: Int = 0 //bad design if nothing negative will always return 0 as smallest value
+    var max: Int = 0 //also doesnt account for small arrays
     for (v <- values) {
       if (v > max) {
         //does two loops
@@ -144,6 +149,7 @@ def countWords: Unit =
   lteggt(b, 3)
 */
   //Done with tubles got of github
+  //Q9
   def lteqgt(values: Array[Int], v: Int) = {
     (values.count(_ < v), values.count(_ == v), values.count(_ > v)) //- note use of done alot
   }
@@ -153,6 +159,7 @@ def countWords: Unit =
   val World = "World"
   Hello.zip(World)
 }
+
 /*
 val props: Map[String, String] = System.getProperties
 val largestKey = props.keySet.foldLeft(0)((i, s) => i max s.length)

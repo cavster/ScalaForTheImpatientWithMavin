@@ -3,6 +3,7 @@ package Chapter8
 /**
  * Created by colmcavanagh on 5/5/14.
  */
+//Q5
 abstract class Pointx(val x:Double , val y:Double)
 class LabledPoint(val lableValue:String,override val x:Double ,override val y:Double) extends Pointx(x , y){//dont need the var or def in superclasses for subclasses
 //note use of override keyword if class is not abstract

@@ -76,7 +76,6 @@ object Chapter3 extends App {
   d.distinct
   //Q9
 
-
   //One way of doing it
   val array = (for (timeZone <- java.util.TimeZone.getAvailableIDs if timeZone.startsWith("America")) yield timeZone.drop(8)).toBuffer.sorted
   println(array)

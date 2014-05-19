@@ -4,7 +4,7 @@
  */
 package Chapter6
 
-
+//Q5
 object Reverse   {
   def main (args: Array[String]) {
     for (arg <- args.reverse) println(arg)
@@ -12,7 +12,7 @@ object Reverse   {
   Reverse.main(Array("Hi","My","Name"))//works
 }
 object Conversions{//Q1
-
+//Q1
   def inchesToCentmeters(inches:Double) = {inches*2.54}
   def gallonsToLiters(gallons:Double) = {gallons*3.78541}
   def milesToKilometers(miles:Double) = {miles*1.60934}

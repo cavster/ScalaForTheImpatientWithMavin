@@ -4,6 +4,7 @@ package Chapter5
 /**
  * Created by colmcavanagh on 5/9/14.
  */
+//Q3 and Q4
 class Time (val hrs:Int, val min:Int){
 
   var h =  hrs * 60 - 1

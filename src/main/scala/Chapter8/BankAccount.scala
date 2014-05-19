@@ -3,6 +3,7 @@ package Chapter8
 /**
  * Created by colmcavanagh on 5/5/14.
  */
+//Q1 + Q 2
 class BankAccount(initialBalance: Double) {
   private var balance = initialBalance
 

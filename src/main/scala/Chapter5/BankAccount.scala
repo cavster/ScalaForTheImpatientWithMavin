@@ -4,6 +4,7 @@ package Chapter5
 /**
  * Created by colmcavanagh on 5/9/14.
  */
+//Q2
 class BankAccount {
   //read only
   private var bal = 0

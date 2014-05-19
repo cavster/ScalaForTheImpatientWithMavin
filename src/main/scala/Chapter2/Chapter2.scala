@@ -42,13 +42,13 @@ object Chapter2 {
   }
 
   //write a for loop that computes the unicode of a string
-
+  //Q7
   def unicodeProductLoop(s: String): Long = {
     var product = 1L
     for (c <- s) product *= c.toLong
     product
   }
-
+  //Q8
   //DoThe previouse excersize without a loop
 
   def unicodeProductNoLoop(s: String): Long = {

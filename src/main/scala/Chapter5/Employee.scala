@@ -4,7 +4,7 @@ package Chapter5
 /**
  * Created by colmcavanagh on 5/12/14.
  */
-
+//Q10
 class Employee(defName: String = "John Q. Public", defSalary: Double = 0.0) {
   val name: String = defName
   var salary: Double = defSalary

@@ -15,6 +15,8 @@ import scala.collection.mutable
  */
 object Chapter13 extends App {
   //works but is not sorted
+
+
   //Q1
 
   def getIndexes(theString: String) = {
@@ -57,6 +59,8 @@ object Chapter13 extends App {
   val testString2 = indexesImmutable("Missisipi")
   println(testString2)
   //from page 171 in book//counts the occurane of each letter
+
+
   //Q3
   println((Map[Char, Int]()/: "Mississipi"){(m,c)=>m+(c->(m.getOrElseUpdate(c,0)+1))})//creates a new set each time
   val linkedListWithZeros = collection.mutable.LinkedList(1, -2, -3, 0, 0, 0, 12, 10, 0)
@@ -72,6 +76,8 @@ object Chapter13 extends App {
   val nameArray =Array("tom","harry","fred")
   val nameMap = collection.mutable.Map("tom"->3,"dick"->4,"fred"->5)
   println(nameMap.keys)
+
+
    //Q4
   def convert(a:Array[String],b:Map[String,Int]) =a.toList.map(b.get(_)).flatMap(x => x)
   //Im too tired to change this
@@ -88,6 +94,8 @@ object Chapter13 extends App {
   println(s)
   //from github
   println((List[Int]() /: frist) { (q, s) => s :: q })
+
+
   //q7
   val prices = List( 5.0, 20.0, 9.95)
   val quantities = List(10,2,1)

@@ -6,14 +6,14 @@ package Tests
 
 import org.junit.runner.RunWith
 import org.scalatest.FunSuite
-//import Chapter8._
+import Chapter8._
 import org.scalatest.junit.JUnitRunner
 
 
 @RunWith(classOf[JUnitRunner])
 class Chapter8Test extends FunSuite {
 //test the bank account classes
-/*
+
   test("Bank Saveings Account"){
     val saveingAccount=new SavingsAccount(500)
     saveingAccount.deposit(1)
@@ -30,5 +30,5 @@ class Chapter8Test extends FunSuite {
       assert(bundle.price == 69)
   }
   //fix this later
-*/
+
 }

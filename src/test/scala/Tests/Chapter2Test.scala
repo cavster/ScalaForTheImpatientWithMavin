@@ -8,11 +8,12 @@ package Tests
 import org.scalatest.junit.JUnitRunner
 import org.junit.runner.RunWith
 import org.scalatest.FunSuite
-//import Chapter2.Chapter2._
+import Chapter2.Chapter2._
 @RunWith(classOf[JUnitRunner])
 class Chapter2Test extends FunSuite {
 //hes was using case classes
- /*test("test signum") {
+
+ test("test signum") {
     println("signum(1): " + getSignum(1))
     assert(getSignum(1)== 1)
     println("signum(0): " + getSignum(0))
@@ -51,6 +52,6 @@ class Chapter2Test extends FunSuite {
     assert(power(2, 1) == 2.0)
     println("""Power(2, -4): """ + power(2, -4))
     assert(power(2, -4) == 0.0625)
-  }*/
+  }
 }
 

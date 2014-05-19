@@ -10,10 +10,10 @@ import org.scalatest.junit.JUnitRunner
 /**
  * Created by colmcavanagh on 5/9/14.
  */
-//import Chapter5._
+import Chapter5._
 @RunWith(classOf[JUnitRunner])
 class Chapter5Test extends FunSuite{
-  /*
+
   test("test deposite Bank") {
     println("Hi")
     val Bank = new BankAccount()
@@ -39,5 +39,5 @@ class Chapter5Test extends FunSuite{
     val person = new Person(-5)
     println("ReturnedAge: " + person.age)
     assert(person.age == 0)
-  }*/
+  }
 }

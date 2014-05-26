@@ -45,7 +45,7 @@ object Orgin extends java.awt.Point{
 class Point( x: Int,  y: Int) extends java.awt.Point {
 }
 
-object Point {
+object Pointx {
   def apply(x: Int, y: Int) = new Point(x, y)
 }
 

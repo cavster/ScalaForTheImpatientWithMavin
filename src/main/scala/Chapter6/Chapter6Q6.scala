@@ -13,14 +13,13 @@ object Chapter6Q6{
     val Diamond = Value("\u2666")
     val Heart = Value("\u2665")
     val Spade = Value("\u2660")
+
+    def isRed(s: PlayingCardSuit):Boolean = {
+      if (s == Heart || s == Diamond) true
+      else false
+    }
+
   }
 
-  import PlayingCardSuit._
 
-  def isRed(s: PlayingCardSuit):String = {
-    if (s == Heart || s == Diamond) "red"
-    else "is not red"
-  }
-
-  for (s <- PlayingCardSuit.values) println(isRed(s))
 }

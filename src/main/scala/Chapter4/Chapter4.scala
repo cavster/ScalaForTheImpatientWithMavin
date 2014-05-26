@@ -91,12 +91,16 @@ object Chapter4 extends App {
   daysLinkedMap += ("Friday" -> Calendar.FRIDAY)
   daysLinkedMap += ("Saturday" -> Calendar.SATURDAY)
   daysLinkedMap += ("Sunday" -> Calendar.SUNDAY)
-  val b = Array[Int](3, 2, -5, 7, -15, 18, -1, 3, 3, 3);
+
+
+
+
+  val b = Array[Int](3, 2, -5, 7, -15, 18, -1, 3, 3, 3)
 
   //Q8
   //done with tubles
   def minmax(values: Array[Int]): (Int, Int) = {
-    return (values.min, values.max)
+     (values.min, values.max)
   }
 
   minmax(b)
@@ -105,7 +109,7 @@ object Chapter4 extends App {
   def minmaxTwo(values: Array[Int]): (Int, Int) = {
     //slightly buggy noticed this in test
     var min: Int = 0 //bad design if nothing negative will always return 0 as smallest value
-    var max: Int = 0 //also doesnt account for small arrays
+    var max: Int = 0 //also doesn't account for small arrays
     for (v <- values) {
       if (v > max) {
         //does two loops

@@ -10,5 +10,5 @@ object Chapter6Test extends App{
   println(MilesToKilometers.convert(50))
   println(GallonsToLiters.convert(55))
   println(MilesToKilometers.convert(46))
-  println(Point(5,6))
+  println(Pointx(5,6))
 }

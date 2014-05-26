@@ -11,11 +11,10 @@ object Chapter3 extends App {
   //Q1
   def fillArray(n:Int): Array[Int] = {
     val r = scala.util.Random
-    val nums = new Array[Int](n-1)
+    val nums = new Array[Int](n)
     for (i <- 0 until nums.length) {
       nums(i) = r.nextInt()
     }
-    println((nums.mkString(", ")))
     nums
   }
 
@@ -37,9 +36,9 @@ object Chapter3 extends App {
   }*/
 
   //case Classes for exception
-  def swapAdajaentElements(arr: Array[Int]):Array[Int] =arr match {
-    case _ if arr.length < 2 =>   arr//maybe put in messgae for error
-    case _ if arr.length > 2 =>   arr.grouped(2).flatMap(_.reverse).toArray
+  def swapAdajaentElements(arr: Array[Int]):Array[Int] =arr.length match {
+    case 1 =>   arr//maybe put in messgae for error//might be a cleaner way to do this
+    case _ =>   arr.grouped(2).flatMap(_.reverse).toArray
   }
   val arraytest= Array(1,2,3,4,5)
   val newt = swapAdajaentElements(arraytest)
@@ -73,7 +72,7 @@ object Chapter3 extends App {
   d.length
   val adverage = d.sum / d.length
   d.reverse
-  d.distinct
+  def ArrayNoDups(d:Array[Int]) = { d.distinct }
   //Q9
 
   //One way of doing it

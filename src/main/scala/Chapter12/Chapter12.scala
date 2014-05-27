@@ -13,9 +13,9 @@ object Chapter12 extends App{
 
   //Q2
   val a = Array(1,2,3,4,5)
-  val max = a.reduceLeft(( x , y ) => if (x > y)x else y)//goes through whole array
-  println(a.max)
-  println(max)
+  def getMax(a:Array[Int]) = a.reduceLeft(( x , y ) => if (x > y) x else y)//goes through whole array
+  println(getMax(a))
+ // println(max)
   //with recursion def factorial(n: Int): Int = if (n == 0) 1 else n * factorial(n - 1)
 
   //Q3

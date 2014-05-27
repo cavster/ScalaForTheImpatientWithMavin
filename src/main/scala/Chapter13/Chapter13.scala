@@ -85,7 +85,7 @@ object Chapter13 extends App {
   //.get returns value associated with _ as an option if found none if not found
   println(convert(nameArray,nameMap))
   println(nameMap.mkString("//"))
-  println(nameMap.filter({case( name, number) => number<4}))//smart scala!
+  println(nameMap.filter({case( name, number) => number < 4}))//smart scala!
 
   val frist =List(1,2,3,4,5,6,7,8,9,10,-23,324,-44)
   val q = (frist :\ List[Int]())(_ :: _)
@@ -99,7 +99,7 @@ object Chapter13 extends App {
   //q7
   val prices = List( 5.0, 20.0, 9.95)
   val quantities = List(10,2,1)
-  println((prices zip quantities) map (p=>p._1*p._2))//as in book p171
+  println((prices zip quantities) map (p=> p._1 * p._2))//as in book p171
   val tuble=(x:Double,y:Int) => x * y
   val answer=(prices zip quantities).map(tuble.tupled)
   println(answer)//multiples them together as is done in tuble

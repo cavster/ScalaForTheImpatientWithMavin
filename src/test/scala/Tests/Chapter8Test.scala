@@ -13,6 +13,34 @@ import org.scalatest.junit.JUnitRunner
 @RunWith(classOf[JUnitRunner])
 class Chapter8Test extends FunSuite {
 //test the bank account classes
+  test("Test Person"){
+    val colm = new Person("Colm")
+    println(colm.name)
+    assert(colm.name == "Colm")
+  }
+
+  test("Test Rectangle"){
+    val rec = new Rectangle( new Point(24,24) ,new Point(25,25) )
+    println(rec.centerPoint)
+    println(rec.bottomRight)
+   // assert(colm.name == "Colm")
+  }
+
+  test("Test Point"){
+    val point = new Point( 36 , 12 )
+    println(point.x)
+    println(point.y)
+    val LabledPointx = new LabledPoint("My Point" , 23 , 55)
+    println(LabledPointx.lableValue)
+    // assert(colm.name == "Colm")
+  }
+
+  test("Test Bank Accounts"){
+    val Bank = new BankAccount(500)
+    Bank.deposit(100)
+
+    assert(Bank.checkBalance == 600)
+  }
 
   test("Bank Saveings Account"){
     val saveingAccount=new SavingsAccount(500)

@@ -6,7 +6,7 @@ package Tests
 import org.scalatest.junit.JUnitRunner
 import org.junit.runner.RunWith
 import org.scalatest.FunSuite
-import scala.collection.mutable
+import scala.collection.{immutable, mutable}
 import Chapter4.Chapter4._
 
 @RunWith(classOf[JUnitRunner])
@@ -28,13 +28,9 @@ class Chapter4Test extends FunSuite{
     val returnedInts =(3,1,2)
     println("ReturnedTuple " + lteqgt(testArray,3))
     assert(lteqgt(testArray,3) == returnedInts)
-  }/*
-  test("test count words with soted map"){
-    val testMap = Map(Hi->1,Hi->2,Hi->3,zero->4)
-    val returnedInts =(3)
-    println("ReturnedTuple " + countWordsWithSortedMap(testMap))
-    assert(lteqgt(testArray,3) == returnedInts)
-  }*/
+  }
+
+
 
 }
 

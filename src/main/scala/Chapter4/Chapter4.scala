@@ -2,16 +2,13 @@ package Chapter4
 
 import scala.collection.mutable
 
-/**
- * Created by colmcavanagh on 5/3/14.
- */
 object Chapter4 extends App {
 
 
-  val items: Map[String, Double] = Map("phone" -> 100.5, "Iphone" -> 4000, "Colm" -> 6045)
+  val items: collection.immutable.Map[String, Double] = Map("phone" -> 100.5, "Iphone" -> 4000, "Colm" -> 6045)
 
   //Q1 with a for loop
-  def computeDiscountItems(items: mutable.Map[String, Double]) = for ((k, v) <- items) yield (k, v * 0.9)
+  def computeDiscountItems(items: collection.mutable.Map[String, Double]) = for ((k, v) <- items) yield (k, v * 0.9)
 
   //with mapValues
   val newItems2 = items.mapValues(_ * 0.9)
@@ -22,7 +19,7 @@ object Chapter4 extends App {
   }
 
   //Q2,3,4
-  /*
+
  def countWords: Unit =
   {
     val in = new java.util.Scanner(new java.io.File("/Users/colmcavanagh/Developer/scalaMavinForTheImpatient/Text.txt")).useDelimiter("\\s")
@@ -39,6 +36,7 @@ object Chapter4 extends App {
 
 
 //another way of doing it
+  /*
   val words = new scala.collection.mutable.HashMap[String, Int]
   val in = new java.util.Scanner(new java.io.File("/Users/colmcavanagh/Developer/scalaTest/text.txt"))
   while (in.hasNext()) {
@@ -49,20 +47,19 @@ object Chapter4 extends App {
       words(word) = 1
   }
   println(words)
-*/
+  */
   //3rd way
   //Q4
-  def countWordsWithSortedMap: Map[String, Int] = {
+  def countWordsWithSortedMap:collection.immutable.Map[String, Int] = {
     val in = new java.util.Scanner(new java.io.File("/Users/colmcavanagh/Developer/scalaMavinForTheImpatient/Text.txt")).useDelimiter("\\s")
-    var map = scala.collection.immutable.SortedMap[String, Int]() //P44
+    var map = scala.collection.mutable.Map[String, Int]() //P44
     while (in.hasNext) {
       val s = in.next()
       map = map + (s -> (map.getOrElse(s, 0) + 1)) //so everytime s is true add one//No new var for the immuteable colm!
       print(s + " ") //
       // println(map)
     }
-    map
-    // println()
+    map.toMap//for immutable
   }
 
   println(countWordsWithSortedMap) //Works!
@@ -92,13 +89,22 @@ object Chapter4 extends App {
   daysLinkedMap += ("Saturday" -> Calendar.SATURDAY)
   daysLinkedMap += ("Sunday" -> Calendar.SUNDAY)
 
+//Q7
 
+  import scala.collection.JavaConversions.propertiesAsScalaMap
+  val props = propertiesAsScalaMap(System.getProperties())
 
+  val maxkey = props.keySet.map(_.length).max
 
-  val b = Array[Int](3, 2, -5, 7, -15, 18, -1, 3, 3, 3)
+  for( (k,v) <- props ) printf("%-" + maxkey + "s | %s\n", k, v)
+  def prn(x: TraversableOnce[_]) = println(x.mkString(x.getClass.getSimpleName + "(", ", ", ")"))
+
 
   //Q8
   //done with tubles
+
+  val b = Array[Int](3, 2, -5, 7, -15, 18, -1, 3, 3, 3)
+
   def minmax(values: Array[Int]): (Int, Int) = {
      (values.min, values.max)
   }

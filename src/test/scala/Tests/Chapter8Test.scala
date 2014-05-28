@@ -20,7 +20,7 @@ class Chapter8Test extends FunSuite {
   }
 
   test("Test Rectangle"){
-    val rec = new Rectangle( new Point(24,24) ,new Point(25,25) )
+    val rec = new Rectanglex( new Point(24,24) ,new Point(25,25) )
     println(rec.centerPoint)
     println(rec.bottomRight)
    // assert(colm.name == "Colm")
@@ -58,11 +58,20 @@ class Chapter8Test extends FunSuite {
       assert(bundle.price == 69)
   }
   test("Test Shapes"){
-    val r = new Rectangle(new Point(0,0), new Point(10, 10))
+    val r = new Rectanglex(new Point(0,0), new Point(10, 10))
     println(r)
 
     val c = new Circle(new Point(7, 7), 10)
     println(c)
+
+  }
+  test("Test Squor"){
+
+    val squareOne = new Square()
+    println(squareOne)
+
+    val squareTwo = new Square(8)
+    println(squareTwo)
 
   }
   //fix this later

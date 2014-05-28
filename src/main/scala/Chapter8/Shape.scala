@@ -16,7 +16,7 @@ abstract class Shape {
   override def toString =  "%s(Center: %s)".format(this.getClass.getSimpleName, centerPoint.toString)
 }
 
-class Rectangle(val topLeft: Point, val bottomRight: Point) extends Shape {
+class Rectanglex(val topLeft: Point, val bottomRight: Point) extends Shape {
   override val centerPoint = new Point((bottomRight.x - topLeft.x) / 2, (bottomRight.y - topLeft.y) / 2)
 }
 

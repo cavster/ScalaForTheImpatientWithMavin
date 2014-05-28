@@ -18,8 +18,7 @@ object Chapter3 extends App {
     nums
   }
 
-  val n = 15
-  fillArray(n)
+
 
   //Q2 + //Q3
   /*
@@ -40,11 +39,6 @@ object Chapter3 extends App {
     case 1 =>   arr//maybe put in messgae for error//might be a cleaner way to do this
     case _ =>   arr.grouped(2).flatMap(_.reverse).toArray
   }
-  val arraytest= Array(1,2,3,4,5)
-  val newt = swapAdajaentElements(arraytest)
-  println("New Array ")
-  println(newt.deep.mkString(" "))
-
 
   //Q4
   val b = Array[Double](3, 2, -5, 7, -15, 18, -1, 3, 3, 3);

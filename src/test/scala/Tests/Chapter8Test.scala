@@ -57,6 +57,14 @@ class Chapter8Test extends FunSuite {
       new SimpleItem(price = 14, description = "Colm new item ")))
       assert(bundle.price == 69)
   }
+  test("Test Shapes"){
+    val r = new Rectangle(new Point(0,0), new Point(10, 10))
+    println(r)
+
+    val c = new Circle(new Point(7, 7), 10)
+    println(c)
+
+  }
   //fix this later
 
 }

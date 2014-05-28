@@ -103,6 +103,7 @@ object Chapter14 extends App{
       case None => None
     }
   }
+
 import scala.math.sqrt
 
   def f(x: Double) = if (x >= 0) Some(sqrt(x)) else None

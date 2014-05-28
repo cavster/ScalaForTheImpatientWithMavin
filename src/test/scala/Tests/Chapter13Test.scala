@@ -23,4 +23,17 @@ class Chapter13Test extends FunSuite {
   val testList =  collection.mutable.LinkedList(1,1,0)
   assert(Chapter13.removeZerosFromLinkedlist(testList) == List(1,1))
 }
+  test("MultiplyZipping"){
+    val prices = List(5.0, 20.0, 9.95)
+    val quantities = List(10, 2, 1)
+    assert(Chapter13.multiply(prices,quantities) == List(50.0, 40.0, 9.95))
+
+  }
+  test(" 3d array"){
+    val a = (1 to 9).toArray
+    val x = Chapter13.arrayDim(a, 3)
+    println(x.deep.mkString(","))
+
+  }
+
 }

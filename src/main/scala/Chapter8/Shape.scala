@@ -21,4 +21,3 @@ class Rectangle(val topLeft: Point, val bottomRight: Point) extends Shape {
 }
 
 class Circle(override val centerPoint: Point, val radius: Int) extends Shape
-

@@ -9,7 +9,9 @@ package Tests
 import org.junit.runner.RunWith
 import org.scalatest.FunSuite
 import org.scalatest.junit.JUnitRunner
+import Chapter12.Chapter12Q10
 import Chapter12._
+
 
 @RunWith(classOf[JUnitRunner])
 class Chapter12Test extends FunSuite {
@@ -39,6 +41,12 @@ class Chapter12Test extends FunSuite {
 
     val y = Chapter12.corresponds(o, p, (p: String, o: Int) => p.length == o)
     println(y)
+  }
+  test("testUnless"){
+    val x = 4
+   Chapter12Q10.testUnless(x != 5){
+     println("The Code Works woo")
+   }
   }
 
 }

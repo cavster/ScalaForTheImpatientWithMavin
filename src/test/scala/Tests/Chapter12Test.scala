@@ -19,6 +19,9 @@ class Chapter12Test extends FunSuite {
   test("Factorial") {
     assert(Chapter12.factorial(5) == 120)
   }
+  test("Factorial2") {
+    assert(Chapter12.Factorial2(5) == 120)
+  }
   test("Largest") {
     assert(Chapter12.largest(x => 10 * x - x * x, 1 to 10) == 25)
   }
@@ -39,14 +42,19 @@ class Chapter12Test extends FunSuite {
     println(o.mkString(", "))
     println(p.mkString(", "))
 
-    val y = Chapter12.corresponds(o, p, (p: String, o: Int) => p.length == o)
+    val y = Chapter12.Corresponding(o, p)
     println(y)
   }
-  test("testUnless"){
-    val x = 4
-   Chapter12Q10.testUnless(x != 5){
-     println("The Code Works woo")
-   }
+  test("Largest2"){
+    println(Chapter12.largestTwo(x => 10 * x - x * x, 1 to 10))
+
   }
+
+  test("Values"){
+
+      println(Chapter12.values(x => x * x , -8 , 5))//pass in the fun its self
+
+    }
+
 
 }

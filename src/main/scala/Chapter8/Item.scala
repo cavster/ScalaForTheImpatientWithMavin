@@ -17,15 +17,3 @@ class Bundle(var items: List[Item] = Nil) extends Item {
   def description = items.map(_.description).mkString(", ")//for all describesions do same
 }
 
-object Test extends App {
-val test = new SimpleItem(500,"Colms Item")
-  println(test)
-  println(test.price)
-  println(test.description)
-  val bundle = new Bundle(items = List(
-    new SimpleItem(price = 55, description = "Colm new item"),
-    new SimpleItem(price = 14, description = "Colm new item the new second item")))
-  println(bundle.price)
-  println(bundle.description)
-
-}

@@ -50,6 +50,18 @@ class Chapter8Test extends FunSuite {
     saveingAccount.deposit(1)
     assert(saveingAccount.checkBalance == 503)
   }
+  test("items"){
+    val test = new SimpleItem(500,"Colms Item")
+    println(test)
+    println(test.price)
+    println(test.description)
+    val bundle = new Bundle(items = List(
+      new SimpleItem(price = 55, description = "Colm new item"),
+      new SimpleItem(price = 14, description = "Colm new item the new second item")))
+    println(bundle.price)
+    println(bundle.description)
+
+  }
 
   test("Test Bundle Methods"){
     val bundle = new Chapter8.Bundle(items = List(//had two names with Bundle

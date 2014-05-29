@@ -10,9 +10,27 @@ import Chapter13._
 
 @RunWith(classOf[JUnitRunner])
 class Chapter13Test extends FunSuite {
+  test("Mkstring "){
+    val a = Array("Tom", "Fred", "Harry")
+    Chapter13.mkString(a)
+  }
+  test("Return intergers"){
+    val nameArray = Array("tom", "harry", "fred")
+    val nameMap = collection.mutable.Map("tom" -> 3, "dick" -> 4, "fred" -> 5)
+    println(Chapter13.convert(nameArray,nameMap))
+
+  }
+  test("IndexesQ2"){
+    println(Chapter13.indexesQ2("Mississippi"))
+
+  }
   test("indexes"){
    // val testMap =  Map(M -> 1, s -> 4, p -> 1, i -> 4)
     println(Chapter13.getIndexes("Mississippi"))
+  }
+  test("Char indexes"){
+    println(Chapter13.charIndex("Mississippi",0))//start at zero
+   //with recursion
   }
 
 /*test("indexesImmutable"){

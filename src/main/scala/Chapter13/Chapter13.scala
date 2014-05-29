@@ -8,7 +8,7 @@ import java.util.TreeMap
 import collection.JavaConversions._
 import scala.collection.mutable._
 import scala.collection
-import scala.collection.mutable
+import scala.collection.{immutable, SortedMap, mutable}
 
 /**
  * Created by colmcavanagh on 5/7/14.
@@ -33,12 +33,21 @@ object Chapter13 extends App {
 
   //Q2
 
-  def indexes(s: String) =
+  def indexesQ2(s: String): immutable.Map[Char, List[Int]] =
     s.zipWithIndex.groupBy(_._1).map(x => (x._1, x._2.map(_._2).toList))
 
-  val testString = indexes("Missisipi")
-  println(testString)
 
+  //Indexes
+def charIndex(str: String, index: Int): SortedMap[Char, SortedSet[Int]] = {
+  if (str.isEmpty) {
+    SortedMap()
+  }
+  else {
+    val nextMap = charIndex(str.tail, index + 1)
+    nextMap + (str(0)
+      -> (nextMap.getOrElse(str(0), SortedSet[Int]()) ++ SortedSet(index)))
+  }
+}
   //differnt method from github
 
   def indexesImmutable(s: String) = {
@@ -49,12 +58,10 @@ object Chapter13 extends App {
       set += i
       res(c.toChar) = set
     }
-
     res
   }
 
-  val testString2 = indexesImmutable("Missisipi")
-  println(testString2)
+
   //from page 171 in book//counts the occurane of each letter
 
 
@@ -74,25 +81,18 @@ object Chapter13 extends App {
     list.filter(_ != 0)
   }
 
-  println(removeZerosFromLinkedlist(linkedListWithZeros))
-  val nameArray = Array("tom", "harry", "fred")
-  val nameMap = collection.mutable.Map("tom" -> 3, "dick" -> 4, "fred" -> 5)
-  println(nameMap.keys)
-
 
   //Q4
-  def convert(a: Array[String], b: Map[String, Int]) = a.toList.map(b.get(_)).flatMap(x => x)
-
+  def convert(a: Array[String], b: Map[String, Int]) = a.toList.flatMap(b.get(_))//2 FOr 1 yeh!
+//wasnt sure how to change this one
   //Im too tired to change this
   //with out flat map returns some or none and flatmap gets rid of it
   //.get returns value associated with _ as an option if found none if not found
-  println(convert(nameArray, nameMap))
-  println(nameMap.mkString("//"))
-  println(nameMap.filter({
-    case (name, number) => number < 4
-  }))
-  //smart scala!
 
+  //smart scala!
+  //Q5
+  def mkString[T](s: Seq[T], sep: String = ", "): String = s.map(_.toString)reduceLeft(_.toString + sep + _.toString)
+ //q6
   val frist = List(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -23, 324, -44)
   val q = (frist :\ List[Int]())(_ :: _)
   println(q)
@@ -123,9 +123,5 @@ object Chapter13 extends App {
   //Q8
   def arrayDim(a: Array[Int], numOfDim: Int) = a.grouped(numOfDim).toArray
 
-  val a = (1 to 9).toArray
-  val x = arrayDim(a, 3)
-
-  println(x.deep.mkString(", "))
 }
 

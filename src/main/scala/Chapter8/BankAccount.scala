@@ -27,7 +27,7 @@ class CheckingAccount(initialBalance: Double) extends BankAccount(initialBalance
 
 class SavingsAccount(initialBalance: Double) extends BankAccount(initialBalance) {
   private val mouthlyIntrest = 0.01
-  var count = 0
+  private var count = 0
 
   def earnMothlyIntrest() = {
     val intrest = initialBalance * mouthlyIntrest //+= would not work!
@@ -48,25 +48,7 @@ class SavingsAccount(initialBalance: Double) extends BankAccount(initialBalance)
     count += 1
     count
   }
-
 }
 
-object Main extends App {
-  val bank1 = new BankAccount(500)
-  println(bank1.deposit(100))
-  println(bank1.withdraw(200))
-  val bank2 = new CheckingAccount(500)
-  if (bank2.isInstanceOf[CheckingAccount]) {
-    println(bank2.deposit(400))
-    println(bank2.withdraw(300))
-  }
-  val bank3 = new SavingsAccount(500)
-  println(bank3)
-  // println(bank3.earnMothlyIntrest())
-  bank3.deposit(5)
-  bank3.deposit(5)
-  bank3.deposit(5)
-  bank3.deposit(5)
-  println(bank3.deposit(5))
-  println(bank3.checkBalance) //after 3 will charge one for transaction
-}
+
+

@@ -29,6 +29,10 @@ class Chapter4Test extends FunSuite{
     println("ReturnedTuple " + lteqgt(testArray,3))
     assert(lteqgt(testArray,3) == returnedInts)
   }
+  test("Count words"){
+    val x = Chapter4.Chapter4.countWordsWithSortedMap
+    println(x)
+  }
 
 
 

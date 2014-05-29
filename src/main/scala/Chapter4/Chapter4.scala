@@ -62,7 +62,7 @@ object Chapter4 extends App {
     map.toMap//for immutable
   }
 
-  println(countWordsWithSortedMap) //Works!
+  //Works!
   //Q6
 
   import scala.collection.mutable.LinkedHashMap
@@ -103,13 +103,11 @@ object Chapter4 extends App {
   //Q8
   //done with tubles
 
-  val b = Array[Int](3, 2, -5, 7, -15, 18, -1, 3, 3, 3)
-
   def minmax(values: Array[Int]): (Int, Int) = {
      (values.min, values.max)
   }
 
-  minmax(b)
+
 
   //done without a tuple or funotions
   def minmaxTwo(values: Array[Int]): (Int, Int) = {
@@ -127,8 +125,6 @@ object Chapter4 extends App {
     }
     (min, max)
   }
-
-  minmaxTwo(b)
 
   //by counts it means sum???
   //with loops
@@ -164,10 +160,7 @@ object Chapter4 extends App {
     (values.count(_ < v), values.count(_ == v), values.count(_ > v)) //- note use of done alot
   }
 
-  lteqgt(b, 3)
-  val Hello = "Hello"
-  val World = "World"
-  Hello.zip(World)
+
 }
 
 /*

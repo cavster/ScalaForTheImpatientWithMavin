@@ -41,7 +41,7 @@ object Chapter3 extends App {
   }
 
   //Q4
-  val b = Array[Double](3, 2, -5, 7, -15, 18, -1, 3, 3, 3);
+
 
   def sortArrayPosToNeg(b: Array[Double]): Array[Double] = {//Kinda Hard to do without ArrayBuffer
     val c = ArrayBuffer[Double]()
@@ -53,21 +53,18 @@ object Chapter3 extends App {
         c += elem
       }
     }
-    println(d)
-    println(c)
     d ++= c.toArray//need to turn it to array
     d.toArray
-
   }
 
-  //Q5,6,7
-  val d = sortArrayPosToNeg(b)
+  //Q5,6,7//Move these to tests
+  val d = Array[Double](3, 2, -5, 7, -15, 18, -1, 3, 3, 3);
   d.sum
   d.length
   def adverage(d:Array[Int]) = {d.sum / d.length}
   d.reverse
   def ArrayNoDups(d:Array[Int]) = { d.distinct }
-  //Q9
+  //Q9//Test this one ???Wasnt sure
 
   //One way of doing it
   val array = (for (timeZone <- java.util.TimeZone.getAvailableIDs if timeZone.startsWith("America")) yield timeZone.drop(8)).toBuffer.sorted

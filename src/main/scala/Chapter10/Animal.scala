@@ -33,13 +33,3 @@ class MyAnimals extends Dog with Cat with Animal with Cow {
 class Cats extends Cat{
   val size =20.3
 }
-object RunTrait extends App{
-
-  val Animal = new MyAnimals()
-  println(Animal.msg)//does in order cow cat dog animal last one in wins with layered triats
-  Animal.log("I Am an animal")//form the animal interface not possable in java
-  //because of order cat is called instead of animal
-  val jasper = new Cats()
-  println(jasper.speed)//Cats has speed Concrete feilds
-  println(jasper.size)//abrtract feild
-}

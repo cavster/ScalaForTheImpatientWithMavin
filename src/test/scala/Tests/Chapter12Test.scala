@@ -30,6 +30,12 @@ class Chapter12Test extends FunSuite {
     val a = Array(1, 2, 3, 4, 5)
     assert(Chapter12.getMax(a) == 5)
   }
+  //
+  test("Pair with currying"){
+    val x = Chapter12.adjustToPair(_ * _)((6, 7))
+    assert(x == 42)
+
+  }
   test("Pair") {
     val pairs = (1 to 10) zip (11 to 20)
   val answer = pairs.map(Chapter12.adjustToPair(_ + _))

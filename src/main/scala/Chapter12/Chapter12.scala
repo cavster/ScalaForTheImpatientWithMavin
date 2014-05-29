@@ -36,7 +36,7 @@ object Chapter12 extends App{
 
   def adjustToPair(fun: (Int, Int) => Int) : ((Int, Int)) => Int = {
     case(x, y) => fun(x, y)//call the funotin on the two varables
-  }
+  }//do again with currying
 
 
   //Q8

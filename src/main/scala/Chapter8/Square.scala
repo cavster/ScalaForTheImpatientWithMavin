@@ -11,12 +11,4 @@ class Square(x : Int, y: Int, width: Int) extends Rectangle(x, y, width, width) 
 }
 
 
-object TestForSquare extends App {
-
-  val squareOne = new Square()
-  println(squareOne)
-
-  val squareTwo = new Square(8)
-  println(squareTwo)
-}
 

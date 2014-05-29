@@ -12,7 +12,7 @@ object Chapter12Q10 extends App {
   }
   val x = 4
   testUnless(x != 5 ){
-    println("The code works woo!")
+    println("The code works woo!")//This test wont work in the test class
 
   }
 }

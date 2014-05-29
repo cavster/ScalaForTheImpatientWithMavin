@@ -13,7 +13,7 @@ object Chapter4 extends App {
   //with mapValues
   val newItems2 = items.mapValues(_ * 0.9)
   //with case classes
-  println(newItems2)
+
   val newItems3 = items.map {
     case (k, v) => (k, v * 0.9)
   }

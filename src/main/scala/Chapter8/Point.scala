@@ -10,9 +10,5 @@ class LabledPoint(val lableValue:String, x:Double , y:Double) extends Pointx(x ,
   //note need val var for get/set etc
   //ask cary about that?
 }
-object PointObject extends App {
-  val  test = new LabledPoint("Black Thursday", 1929 , 230.07)
-  println(test.x)
-  println(test.lableValue)
-}
+
 

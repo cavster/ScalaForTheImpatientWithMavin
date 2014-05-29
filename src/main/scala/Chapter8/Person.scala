@@ -11,10 +11,3 @@ class SecretAgent(codename:String) extends Person(codename){
   override val toString = "secret"
 
 }
-object testPerson extends App{
-  val p = new Person("colm")
-  val s = new SecretAgent(("007 colm"))
-  println(s.name)
-  println(s.toString)
-  println(p.name)
-}

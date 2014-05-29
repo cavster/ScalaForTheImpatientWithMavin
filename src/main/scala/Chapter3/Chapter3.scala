@@ -64,7 +64,7 @@ object Chapter3 extends App {
   val d = sortArrayPosToNeg(b)
   d.sum
   d.length
-  val adverage = d.sum / d.length
+  def adverage(d:Array[Int]) = {d.sum / d.length}
   d.reverse
   def ArrayNoDups(d:Array[Int]) = { d.distinct }
   //Q9

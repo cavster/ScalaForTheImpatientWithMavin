@@ -19,7 +19,11 @@ class Chapter3Test extends FunSuite with BeforeAndAfter{
     println(fillArray(5).mkString(", "))
     assert (fillArray(5).length == 5)
   }//not sure what to test
+  test("ADVERAGE"){
+  val b = Array(1,2,3,-1,2)
+  assert(Chapter3.Chapter3.adverage(b) == 1)
 
+   }
 
   test("test Sort Array pos to neg Full Array") {
     val b = Array(1.0,2.0,3.0,-1.0,2.0)

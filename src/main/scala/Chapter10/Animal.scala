@@ -4,7 +4,7 @@ package Chapter10
  * Created by colmcavanagh on 5/9/14.
  */
 //Q7
-trait Animal {
+trait Animal {//Didnt test this one becasue it was my example
   def msg = "ROAR"
   def log(msg: String){ println(msg)}
   val speed = 15

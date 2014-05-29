@@ -18,10 +18,5 @@ object MainQ2 extends  App{
     }
   }
 
-  val op1 = new OrderedPoint(5, 10)
-  val op2 = new OrderedPoint(10, 5)
-
-  println (op1 < op2)
-  println(op2 < op1)
 }
 

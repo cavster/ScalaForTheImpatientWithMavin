@@ -47,7 +47,7 @@ class Chapter14Test extends FunSuite {
     println(x.map(_.getOrElse(0)).sum)
   }
   test("items and bundles") {
-    /*
+    //Im skipping this test//import packages at top of classes
     val ItemsOfIntrest =new Bundle ("Father's day special", 20.0,
       Multiple (1, Article ("Scala for the Impatient", 39.95) ),
       Bundle ("Anchor Distillery Sampler", 10.0,
@@ -58,7 +58,5 @@ class Chapter14Test extends FunSuite {
     println(ItemsOfIntrest)
 
   }
-    println(Chapter14.)
-  }*/
-  }
+
 }
